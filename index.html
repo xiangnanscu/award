@@ -7,7 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>20</title>
   <style type="text/css">
-    video#bgvid {
+    .noscroll {
+      overflow-y: scroll;
+    }
+
+    .noscroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    #bgvid {
       position: fixed;
       right: 0;
       bottom: 0;
@@ -17,17 +25,21 @@
       height: auto;
       z-index: -100;
       background-size: cover;
+      background-image: url(20da.png);
     }
   </style>
-  <script type="module" crossorigin src="/award/assets/index.e0ffb291.js"></script>
-  <link rel="stylesheet" href="/award/assets/index.20112db4.css">
+  <script type="module" crossorigin src="/award/assets/index.fdf4043a.js"></script>
+  <link rel="stylesheet" href="/award/assets/index.06062e8b.css">
 </head>
 
 <body>
-  <video autoplay muted loop id="bgvid">
+  <!-- <video autoplay muted loop id="bgvid2">
     <source src="20da.mp4" type="video/mp4">
-  </video>
-  <div id="app"></div>
+  </video> -->
+  <div id="bgvid">
+
+  </div>
+  <div id="app" class="noscroll"></div>
   
 </body>
 
