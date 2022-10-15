@@ -276,13 +276,6 @@ window.addEventListener('keyup', function (event) {
 </template>
 
 <style scoped>
-.fullscreen {
-  width: 100vw;
-  max-width: none;
-  height: 90%;
-  margin: 0;
-}
-
 .the-one-margin {
   margin-top: v-bind(theOneMargin);
 }
