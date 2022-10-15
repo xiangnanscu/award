@@ -1,0 +1,5 @@
+.vscode
+.github
+.npmrc
+public
+node_modules

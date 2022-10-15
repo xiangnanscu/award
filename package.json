@@ -1,0 +1,35 @@
+{
+  "name": "award",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "nginx": "nginx -p . -c nginx.conf",
+    "nginx:reload": "yarn nginx -s reload",
+    "nginx:stop": "yarn nginx -s stop",
+    "prerelease": "npm run u && npm --no-git-tag-version version minor",
+    "release": "push_option=release npm run push",
+    "git:reset":"git checkout --orphan temp_branch && git add -A && git commit -am \"init\" && git branch -D master && git branch -m master && git push -f origin master",
+    "deploy": "DEPLOY_OWN=true vite build && yarn push p master -o nginx && git push origin master",
+    "push": "git add . && git commit -am \"${msg:-push}\" && git push --push-option=${push_option:-nothing}",
+    "u": "ncu -u && npm install"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.2",
+    "vue": "^3.2.40",
+    "vue3-hotkey": "^1.0.2",
+    "vue3-resize-text": "^0.1.0",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.18.12/xlsx-0.18.12.tgz"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.1.2",
+    "@vitejs/plugin-vue-jsx": "^2.0.1",
+    "sass": "^1.55.0",
+    "unplugin-auto-import": "^0.11.2",
+    "vite": "^3.1.8"
+  }
+}
